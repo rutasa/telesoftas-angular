@@ -1,5 +1,5 @@
 th {
-  border: 5px solid white;
+  border: 2px solid white;
 }
 
 img {
@@ -55,10 +55,10 @@ button:active {
 }
 
 input[type="text"] {
-  width: 255px;
+  width: 260px;
   height: 40px;
   padding: 0 10px;
-  margin: 0 10px 0 5px;
+  margin: 0 5px;
 }
 
 input[type="submit"] {

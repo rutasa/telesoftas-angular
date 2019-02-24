@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ISuggestion } from './shared/interfaces';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AppComponent implements OnInit {
-  suggestions: any[];
+  suggestions: ISuggestion[];
   suggestion: string;
 
   constructor() {}
@@ -18,8 +19,8 @@ export class AppComponent implements OnInit {
   }
 
   likeSuggestion(sugg) {
-    sugg.likes += 1;
-    sugg.liked = true;
+    sugg.likes = sugg.liked ? sugg.likes - 1 : sugg.likes + 1;
+    sugg.liked = !sugg.liked;
   }
 
   addSuggestion() {
